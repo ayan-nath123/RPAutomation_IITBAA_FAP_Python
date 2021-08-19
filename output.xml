@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 4.1 (Python 3.9.6 on win32)" generated="20210812 13:19:23.137" rpa="false" schemaversion="2">
+<suite id="s1" name="adminLoginApplicationProcess" source="C:\Users\soumya\PycharmProjects\IIT BAA\uatTestCases\adminLoginApplicationProcess.robot">
+<test id="s1-t1" name="Launch and adminLogin the browser">
+<kw name="Set Screenshots Path">
+<kw name="Get Current Date" library="DateTime">
+<var>${date1}</var>
+<arg>result_format=%Y-%m-%d %H-%M-%S</arg>
+<doc>Returns current local or UTC time with an optional increment.</doc>
+<msg timestamp="20210812 13:19:23.313" level="INFO">${date1} = 2021-08-12 13-19-23</msg>
+<status status="PASS" starttime="20210812 13:19:23.313" endtime="20210812 13:19:23.313"/>
+</kw>
+<kw name="Set Screenshot Directory" library="SeleniumLibrary">
+<arg>${date1}/</arg>
+<doc>Sets the directory for captured screenshots.</doc>
+<msg timestamp="20210812 13:19:23.313" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom test library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+<status status="PASS" starttime="20210812 13:19:23.313" endtime="20210812 13:19:23.313"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:23.313" endtime="20210812 13:19:23.313"/>
+</kw>
+<kw name="Open The Browser">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20210812 13:19:23.313" level="INFO">Opening browser 'chrome' to base url 'http://deviitbatest.ttssupport.info/'.</msg>
+<status status="PASS" starttime="20210812 13:19:23.313" endtime="20210812 13:19:33.607"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20210812 13:19:33.608" endtime="20210812 13:19:33.725"/>
+</kw>
+<kw name="Title Should Be" library="SeleniumLibrary">
+<arg>${loginpagetitle}</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<msg timestamp="20210812 13:19:33.728" level="INFO">Page title is 'IIT BAA System LogIn'.</msg>
+<status status="PASS" starttime="20210812 13:19:33.725" endtime="20210812 13:19:33.728"/>
+</kw>
+<kw name="Screenshots openBrowser" sourcename="Screenshots ${scrName}">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${scrName}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210812 13:19:34.440" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2021-08-12%2013-19-23/openBrowser.png"&gt;&lt;img src="2021-08-12%2013-19-23/openBrowser.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210812 13:19:33.729" endtime="20210812 13:19:34.440"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:33.729" endtime="20210812 13:19:34.441"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:23.313" endtime="20210812 13:19:34.441"/>
+</kw>
+<kw name="Admin Login Page">
+<kw name="Sleep" library="BuiltIn">
+<arg>5</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210812 13:19:39.441" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20210812 13:19:34.441" endtime="20210812 13:19:39.441"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://button[@class='frm_btn log-in-btn']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:39.443" level="INFO">Clicking element 'xpath://button[@class='frm_btn log-in-btn']'.</msg>
+<status status="PASS" starttime="20210812 13:19:39.442" endtime="20210812 13:19:39.601"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210812 13:19:41.604" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210812 13:19:39.601" endtime="20210812 13:19:41.604"/>
+</kw>
+<kw name="Screenshots loginButtonClick" sourcename="Screenshots ${scrName}">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${scrName}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210812 13:19:42.136" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2021-08-12%2013-19-23/loginButtonClick.png"&gt;&lt;img src="2021-08-12%2013-19-23/loginButtonClick.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210812 13:19:41.607" endtime="20210812 13:19:42.136"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:41.605" endtime="20210812 13:19:42.137"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${"user_txt"}</var>
+<arg>id:user_name</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210812 13:19:42.137" level="INFO">${"user_txt"} = id:user_name</msg>
+<status status="PASS" starttime="20210812 13:19:42.137" endtime="20210812 13:19:42.137"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${"user_txt"}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210812 13:19:42.158" level="INFO">Element 'id:user_name' is displayed.</msg>
+<status status="PASS" starttime="20210812 13:19:42.137" endtime="20210812 13:19:42.158"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${"user_txt"}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210812 13:19:42.159" endtime="20210812 13:19:42.174"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${"user_txt"}</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:42.175" level="INFO">Typing text 'support@tangenttechsolutions.com' into text field 'id:user_name'.</msg>
+<status status="PASS" starttime="20210812 13:19:42.175" endtime="20210812 13:19:42.272"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210812 13:19:44.274" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210812 13:19:42.273" endtime="20210812 13:19:44.274"/>
+</kw>
+<kw name="Screenshots afterUsernameEnter" sourcename="Screenshots ${scrName}">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${scrName}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210812 13:19:44.761" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2021-08-12%2013-19-23/afterUsernameEnter.png"&gt;&lt;img src="2021-08-12%2013-19-23/afterUsernameEnter.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210812 13:19:44.276" endtime="20210812 13:19:44.761"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:44.275" endtime="20210812 13:19:44.762"/>
+</kw>
+<kw name="Set Variable" library="BuiltIn">
+<var>${"password_txt"}</var>
+<arg>id:password</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<msg timestamp="20210812 13:19:44.762" level="INFO">${"password_txt"} = id:password</msg>
+<status status="PASS" starttime="20210812 13:19:44.762" endtime="20210812 13:19:44.762"/>
+</kw>
+<kw name="Element Should Be Visible" library="SeleniumLibrary">
+<arg>${"password_txt"}</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<msg timestamp="20210812 13:19:44.783" level="INFO">Element 'id:password' is displayed.</msg>
+<status status="PASS" starttime="20210812 13:19:44.762" endtime="20210812 13:19:44.783"/>
+</kw>
+<kw name="Element Should Be Enabled" library="SeleniumLibrary">
+<arg>${"password_txt"}</arg>
+<doc>Verifies that element identified by ``locator`` is enabled.</doc>
+<status status="PASS" starttime="20210812 13:19:44.784" endtime="20210812 13:19:44.805"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${"password_txt"}</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:44.806" level="INFO">Typing text 'Abc@1234' into text field 'id:password'.</msg>
+<status status="PASS" starttime="20210812 13:19:44.805" endtime="20210812 13:19:44.898"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210812 13:19:46.899" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210812 13:19:44.898" endtime="20210812 13:19:46.899"/>
+</kw>
+<kw name="Screenshots afterPasswordEnter" sourcename="Screenshots ${scrName}">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${scrName}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210812 13:19:47.403" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2021-08-12%2013-19-23/afterPasswordEnter.png"&gt;&lt;img src="2021-08-12%2013-19-23/afterPasswordEnter.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210812 13:19:46.901" endtime="20210812 13:19:47.403"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:46.900" endtime="20210812 13:19:47.404"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@id='btn_login']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:47.404" level="INFO">Clicking button 'xpath://button[@id='btn_login']'.</msg>
+<status status="PASS" starttime="20210812 13:19:47.404" endtime="20210812 13:19:47.875"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210812 13:19:49.880" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210812 13:19:47.875" endtime="20210812 13:19:49.880"/>
+</kw>
+<kw name="Screenshots afterLogin" sourcename="Screenshots ${scrName}">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${scrName}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210812 13:19:50.005" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2021-08-12%2013-19-23/afterLogin.png"&gt;&lt;img src="2021-08-12%2013-19-23/afterLogin.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210812 13:19:49.880" endtime="20210812 13:19:50.005"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:49.880" endtime="20210812 13:19:50.005"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:34.441" endtime="20210812 13:19:50.005"/>
+</kw>
+<kw name="Shortlist Application">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://body/div[1]/ul[1]/li[3]/a[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:50.013" level="INFO">Clicking element 'xpath://body/div[1]/ul[1]/li[3]/a[1]'.</msg>
+<status status="PASS" starttime="20210812 13:19:50.013" endtime="20210812 13:19:50.055"/>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<arg>xpath://a[contains(text(),'View Application')]</arg>
+<doc>Clicks a link identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:50.056" level="INFO">Clicking link 'xpath://a[contains(text(),'View Application')]'.</msg>
+<status status="PASS" starttime="20210812 13:19:50.056" endtime="20210812 13:19:52.922"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210812 13:19:54.927" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210812 13:19:52.922" endtime="20210812 13:19:54.927"/>
+</kw>
+<kw name="Screenshots viewApplication" sourcename="Screenshots ${scrName}">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${scrName}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210812 13:19:55.039" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2021-08-12%2013-19-23/viewApplication.png"&gt;&lt;img src="2021-08-12%2013-19-23/viewApplication.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210812 13:19:54.927" endtime="20210812 13:19:55.039"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:54.927" endtime="20210812 13:19:55.039"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://li[contains(text(),'Shortlisted Application')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:55.039" level="INFO">Clicking element 'xpath://li[contains(text(),'Shortlisted Application')]'.</msg>
+<status status="PASS" starttime="20210812 13:19:55.039" endtime="20210812 13:19:55.105"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>xpath://button[@id='shortlistBtn']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:55.106" level="INFO">Clicking button 'xpath://button[@id='shortlistBtn']'.</msg>
+<status status="PASS" starttime="20210812 13:19:55.106" endtime="20210812 13:19:55.196"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210812 13:19:57.204" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210812 13:19:55.196" endtime="20210812 13:19:57.204"/>
+</kw>
+<kw name="Screenshots allShortlistedApplications" sourcename="Screenshots ${scrName}">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${scrName}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210812 13:19:57.322" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2021-08-12%2013-19-23/allShortlistedApplications.png"&gt;&lt;img src="2021-08-12%2013-19-23/allShortlistedApplications.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210812 13:19:57.204" endtime="20210812 13:19:57.322"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:57.204" endtime="20210812 13:19:57.322"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://tbody/tr[1]/td[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:57.322" level="INFO">Clicking element 'xpath://tbody/tr[1]/td[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]'.</msg>
+<status status="PASS" starttime="20210812 13:19:57.322" endtime="20210812 13:19:57.381"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath://tbody/tr[1]/td[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/ul[1]/li[1]/a[1]/button[1]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20210812 13:19:57.382" level="INFO">Clicking element 'xpath://tbody/tr[1]/td[1]/div[1]/div[1]/div[2]/div[1]/div[2]/div[2]/div[3]/div[1]/div[2]/ul[1]/li[1]/a[1]/button[1]'.</msg>
+<status status="PASS" starttime="20210812 13:19:57.381" endtime="20210812 13:19:58.362"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20210812 13:20:00.365" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20210812 13:19:58.362" endtime="20210812 13:20:00.365"/>
+</kw>
+<kw name="Screenshots addInterviewSchedule" sourcename="Screenshots ${scrName}">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<arg>${scrName}.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20210812 13:20:00.467" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="2021-08-12%2013-19-23/addInterviewSchedule.png"&gt;&lt;img src="2021-08-12%2013-19-23/addInterviewSchedule.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20210812 13:20:00.365" endtime="20210812 13:20:00.467"/>
+</kw>
+<status status="PASS" starttime="20210812 13:20:00.365" endtime="20210812 13:20:00.467"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:50.005" endtime="20210812 13:20:00.467"/>
+</kw>
+<status status="PASS" starttime="20210812 13:19:23.313" endtime="20210812 13:20:00.467"/>
+</test>
+<status status="PASS" starttime="20210812 13:19:23.137" endtime="20210812 13:20:00.475"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="adminLoginApplicationProcess">adminLoginApplicationProcess</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20210812 13:19:23.313" level="WARN">Keyword 'Set Screenshot Directory' found both from a custom test library 'SeleniumLibrary' and a standard library 'Screenshot'. The custom keyword is used. To select explicitly, and to get rid of this warning, use either 'SeleniumLibrary.Set Screenshot Directory' or 'Screenshot.Set Screenshot Directory'.</msg>
+</errors>
+</robot>
