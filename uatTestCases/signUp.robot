@@ -34,7 +34,7 @@ Open the browser
 Goto signin page
         sleep   5
         click element     xpath://button[@class='frm_btn log-in-btn']
-        sleep   2
+        sleep   5
         Screenshots loginButtonClick
         click link  xpath://a[contains(text(),'Sign Up')]
         sleep   2
